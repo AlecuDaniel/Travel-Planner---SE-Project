@@ -11,6 +11,10 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./Travel Planner - SE Project
     runs-on: windows-latest
     permissions:
       contents: read #This is required for actions/checkout
