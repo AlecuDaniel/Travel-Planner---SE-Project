@@ -13,5 +13,10 @@ namespace Travel_Planner___SE_Project.Controllers
         {
             return View();
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
     }
 }
