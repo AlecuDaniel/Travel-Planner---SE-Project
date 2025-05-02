@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Travel_Planner___SE_Project.Data;
+using Travel_Planner___SE_Project.Data.Repositories;
+using Travel_Planner___SE_Project.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<TravelDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TravelDbConnection")));
+
+builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
+builder.Services.AddScoped<IDestinationService, DestinationService>();
 
 var app = builder.Build();
 
