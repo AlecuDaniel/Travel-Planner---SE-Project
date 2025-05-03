@@ -9,5 +9,7 @@ namespace Travel_Planner___SE_Project.Services
         Task AddAsync(Destination destination);
         Task UpdateAsync(Destination destination);
         Task DeleteAsync(int id);
+        Task<IEnumerable<Destination>> SearchAsync(string query);
+
     }
 }

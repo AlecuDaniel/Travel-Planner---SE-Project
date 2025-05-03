@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Travel_Planner___SE_Project.Models.Destination>
+
+@if (!Model.Any())
+{
+    <p>No destinations found matching your search.</p>
+}
+else
+{
+    foreach (var destination in Model)
+    {
+        <div class="meal">
+            <img class="travel-image" src="@destination.ImageUrl" alt="@destination.Name" />
+            <p class="meal-title">@destination.Name</p>
+            <ul class="meal-attributes">
+                <li class="meal-attribute">
+                    <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                    <img class="flag-image" src="~/img/@destination.Country.ToLower().Replace(" ", "").Trim() + " .png"">
+                    <span>@destination.Country</span>
+                </li>
+                <li class="meal-attribute">
+                    <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                    <span>@destination.Description</span>
+                </li>
+            </ul>
+        </div>
+    }
+}
