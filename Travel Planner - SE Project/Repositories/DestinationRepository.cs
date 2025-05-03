@@ -49,5 +49,13 @@ namespace Travel_Planner___SE_Project.Data.Repositories
         {
             return await _context.Destinations.AnyAsync(d => d.DestinationId == id);
         }
+
+        public async Task<IEnumerable<Destination>> SearchAsync(string query)
+        {
+            return await _context.Destinations
+                .Where(d => EF.Functions.Like(d.Name.ToLower(), $"%{query.ToLower()}%") ||
+                            EF.Functions.Like(d.Country.ToLower(), $"%{query.ToLower()}%"))
+                .ToListAsync();
+        }
     }
 }

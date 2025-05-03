@@ -10,5 +10,6 @@ namespace Travel_Planner___SE_Project.Data.Repositories
         Task UpdateAsync(Destination destination);
         Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);
+        Task<IEnumerable<Destination>> SearchAsync(string query);
     }
 }

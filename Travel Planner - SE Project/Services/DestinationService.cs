@@ -36,5 +36,10 @@ namespace Travel_Planner___SE_Project.Services
         {
             await _repository.DeleteAsync(id);
         }
+
+        public async Task<IEnumerable<Destination>> SearchAsync(string query)
+        {
+            return await _repository.SearchAsync(query);
+        }
     }
 }
