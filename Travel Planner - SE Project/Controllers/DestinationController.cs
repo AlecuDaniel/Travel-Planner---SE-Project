@@ -18,6 +18,23 @@ namespace Travel_Planner___SE_Project.Controllers
             return View();
         }
 
+        // GET: News/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var destination = await _destinationService.GetByIdAsync(id.Value);
+            if (destination == null)
+            {
+                return NotFound();
+            }
+
+            return View(destination);
+        }
+
         [HttpGet]
         public async Task<IActionResult> Search(string query)
         {

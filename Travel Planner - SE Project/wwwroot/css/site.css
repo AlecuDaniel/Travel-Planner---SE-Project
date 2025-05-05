@@ -39,4 +39,5 @@ body {
 .main-content {
     flex-grow: 1;
     min-height: 500px;
+    margin-bottom: 20px !important;
 }
