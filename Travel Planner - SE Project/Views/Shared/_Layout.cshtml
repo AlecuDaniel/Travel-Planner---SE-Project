@@ -3,64 +3,66 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Travel_Planner___SE_Project</title>
-    <script type="importmap"></script>
+    <title>@ViewData["Title"] - TravelNOW</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Travel_Planner___SE_Project.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" />
 </head>
 <body>
-<header class="header">
-    <div class="secondary-nav">
-        <ul class="secondary-nav-list">
-            <li><a class="secondary-nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a class="secondary-nav-link" asp-controller="Home" asp-action="Contact">Contact</a></li>
-            <li><a class="secondary-nav-link" asp-controller="Home" asp-action="About">About us</a></li>
-        </ul>
-    </div>
-    <nav>
-        <ul class="main-nav-list">
-            <li><a class="main-nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a></li>
-            <li><a class="main-nav-link" asp-controller="Account" asp-action="Login">Log in</a></li>
-            <li><a class="main-nav-link nav-sign-up" asp-controller="Account" asp-action="Register">Sign up</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="page-wrapper">
 
+        <header class="header">
+            <div class="secondary-nav">
+                <ul class="secondary-nav-list">
+                    <li><a class="secondary-nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a class="secondary-nav-link" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a class="secondary-nav-link" asp-controller="Home" asp-action="About">About us</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul class="main-nav-list">
+                    <li><a class="main-nav-link" asp-controller="Admin" asp-action="Index">Admin Panel</a></li>
+                    <li><a class="main-nav-link" asp-controller="Account" asp-action="Login">Log in</a></li>
+                    <li><a class="main-nav-link nav-sign-up" asp-controller="Account" asp-action="Register">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main role="main" class="container">
+        <main role="main" class="main-content container">
             @RenderBody()
         </main>
-    
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="contact-container">
-                <span class="contact-title">Contact</span>
-                <span class="street">Street: Bulevardul Decebal</span>
-                <span class="city">City: Craiova</span>
-                <span class="zip-code">Zip Code: 20575</span>
-                <span class="phone-number">Phone Number: 443-498-7166</span>
-                <span class="email">Email: randomemail@gmail.com</span>
-            </div>
-            <div class="newsletter-container">
-                <span class="newsletter-title">Newsletter</span>
-                <input type="email"
-                       value="Your email adress"
-                       class="newsletter-input" />
-                <form>
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
-                <div class="contact-icons">
-                    <ion-icon name="logo-facebook" class="contact-icon"></ion-icon>
-                    <ion-icon name="logo-instagram" class="contact-icon"></ion-icon>
-                    <ion-icon name="logo-twitter" class="contact-icon"></ion-icon>
-                    <ion-icon name="logo-youtube" class="contact-icon"></ion-icon>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="contact-container">
+                    <span class="contact-title">Contact</span>
+                    <span class="street">Street: Bulevardul Decebal</span>
+                    <span class="city">City: Craiova</span>
+                    <span class="zip-code">Zip Code: 20575</span>
+                    <span class="phone-number">Phone Number: 443-498-7166</span>
+                    <span class="email">Email: randomemail@gmail.com</span>
+                </div>
+                <div class="newsletter-container">
+                    <span class="newsletter-title">Newsletter</span>
+                    <input type="email"
+                           value="Your email adress"
+                           class="newsletter-input" />
+                    <form>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                    <div class="contact-icons">
+                        <ion-icon name="logo-facebook" class="contact-icon"></ion-icon>
+                        <ion-icon name="logo-instagram" class="contact-icon"></ion-icon>
+                        <ion-icon name="logo-twitter" class="contact-icon"></ion-icon>
+                        <ion-icon name="logo-youtube" class="contact-icon"></ion-icon>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
