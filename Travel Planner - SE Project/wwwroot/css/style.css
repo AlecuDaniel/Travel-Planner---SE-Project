@@ -3,13 +3,13 @@
 /************************************/
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fdf2e9;
-
-  height: 9.6rem;
-  padding: 0 3.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+    height: 9.6rem;
+    padding: 0 3.6rem;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -68,14 +68,14 @@
 /* Gallery */
 /************************************/
 
-.meal {
+.meal, .travel {
     box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
     border-radius: 11px;
     padding-bottom: 1.6rem;
     overflow: hidden;
 }
 
-.meal-title {
+.meal-title, .travel-title {
     font-size: 2.2rem;
     color: #333;
     font-weight: 600;
@@ -84,7 +84,7 @@
     margin-bottom: 3.2rem;
 }
 
-.meal-attributes {
+.meal-attributes, .travel-attributes {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -92,33 +92,29 @@
     gap: 2rem;
 }
 
-.meal-attribute {
+.meal-attribute, .travel-attribute {
     font-size: 1.8rem;
     display: flex;
     align-items: center;
     gap: 1.6rem;
 }
 
-.meal-icon {
+.meal-icon, .travel-icon {
     height: 2.4rem;
     width: 2.4rem;
     color: #e67e22;
 }
-
-.meal-img {
-    width: 100%;
-}
-
 
 /************************************/
 /* FOOTER */
 /************************************/
 
 .footer {
-  padding: 2rem 4.8rem;
-  border-top: solid 9px;
-  border-color: #ffc078;
-  background-color: #fdf2e9;
+    padding: 2rem 4.8rem;
+    border-top: solid 9px;
+    border-color: #ffc078;
+    background-color: #fdf2e9;
+    margin-top: auto;
 }
 
 .footer-container {

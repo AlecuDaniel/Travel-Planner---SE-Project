@@ -8,20 +8,22 @@ else
 {
     foreach (var destination in Model)
     {
-        <div class="meal">
-            <img class="travel-image" src="@destination.ImageUrl" alt="@destination.Name" />
-            <p class="meal-title">@destination.Name</p>
-            <ul class="meal-attributes">
-                <li class="meal-attribute">
-                    <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
-                    <img class="flag-image" src="~/img/@destination.Country.ToLower().Replace(" ", "").Trim() + " .png"">
-                    <span>@destination.Country</span>
-                </li>
-                <li class="meal-attribute">
-                    <ion-icon class="meal-icon" name="star-outline"></ion-icon>
-                    <span>@destination.Description</span>
-                </li>
-            </ul>
-        </div>
+        <a href="@Url.Action("Details", new { id = destination.DestinationId })" class="travel-link">
+            <div class="travel">
+                <img class="travel-image" src="/img/@destination.ImageUrl" alt="@destination.Name" />
+                <p class="travel-title">@destination.Name</p>
+                <ul class="travel-attributes">
+                    <li class="travel-attribute">
+                        <ion-icon class="travel-icon" name="flame-outline"></ion-icon>
+                        <img class="flag-image" src="@Url.Content("~/img/" + destination.Country.Replace(" ", "").Trim() + ".png")" alt="@destination.Country Flag" />
+                        <span>@destination.Country</span>
+                    </li>
+                    <li class="travel-attribute">
+                        <ion-icon class="travel-icon" name="star-outline"></ion-icon>
+                        <span>@(destination.Description?.Split('.')[0] + ".")</span>
+                    </li>
+                </ul>
+            </div>
+        </a>
     }
 }
