@@ -14,9 +14,9 @@ builder.Services.AddScoped<IDestinationService, DestinationService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.awgawgwagawgawg
 if (!app.Environment.IsDevelopment())
-{
+{awfawfawfwafwafa
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
