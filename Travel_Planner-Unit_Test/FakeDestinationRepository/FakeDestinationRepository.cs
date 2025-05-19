@@ -10,7 +10,9 @@ namespace Travel_Planner_Unit_Test
         {
             new Destination { DestinationId = 1, Name = "Paris", Country = "France" },
             new Destination { DestinationId = 2, Name = "Tokyo", Country = "Japan" },
-            new Destination { DestinationId = 3, Name = "Parioli", Country = "Italy" }
+            new Destination { DestinationId = 3, Name = "Parioli", Country = "Italy" },
+            new Destination { DestinationId = 4, Name = "Bali", Country = "Inodnesia" },
+            new Destination { DestinationId = 5, Name = "Scornicesti", Country = "Romania" }
         };
 
         public Task<IEnumerable<Destination>> GetAllAsync() => Task.FromResult<IEnumerable<Destination>>(_destinations);
